@@ -1,6 +1,5 @@
 import express from 'express'
 import mongoose from 'mongoose'
-import mongodb from 'mongodb'
 import dotenv from 'dotenv'
 
 dotenv.config()

@@ -1,7 +1,7 @@
 import Book from "../models/Book.js";
 
 //GET books
-export const getAllBooks= async (req, res) => {
+export const getAllBooks = async (req, res) => {
   try {
     const data = await Book.find();
     res.status(200).json({ data });
@@ -29,7 +29,7 @@ export const createBook = async (req, res) => {
   }
 }
 //GET book by id
-export const getBook= async (req, res) => {
+export const getBook = async (req, res) => {
   try {
     const id = req.params.id;
     const data = await Book.findById(id);
@@ -39,7 +39,7 @@ export const getBook= async (req, res) => {
   }
 };
 //PUT book by id
-export const updateBook= async (req, res) => {
+export const updateBook = async (req, res) => {
   try {
     const id = req.params.id;
     const { title, author, publishedDate, genre, price } = req.body;
@@ -54,7 +54,7 @@ export const updateBook= async (req, res) => {
   }
 }
 //DELETE book by id
-export const deleteBook= async (req, res) => {
+export const deleteBook = async (req, res) => {
   try {
     const id = req.params.id;
     const data = await Book.findByIdAndDelete(id);
